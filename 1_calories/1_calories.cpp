@@ -3,8 +3,6 @@
 #include <string>
 using namespace std;
 
-void move(int, int, int);
-
 int main() {
 	string tmp;
 	int count = 0;
@@ -12,7 +10,9 @@ int main() {
 
 	ifstream in("input.txt");
 
+	// Solution 1: consider only the first if
 	while(getline(in, tmp)) {
+		// Check if the line is empty
 		if(!tmp.size()) {
 			if(count > max1) {
 				max3 = max2;
